@@ -17,9 +17,10 @@ import { Layout } from "./layout";
 import Index from "./pages/index";
 import NotFound from "./pages/NotFound";
 import DashboardPage from "./pages/dashboard/DashboardPage";
+import LoginPage from "./pages/login";
 import { useTheme } from "./theme/use-theme";
 
-const appName = "My app";
+const appName = "e-CMR";
 
 // Define sidebar configuration
 const dashboardSidebar = {
@@ -87,6 +88,7 @@ const App = () => {
                           { label: "About", href: "/about" },
                           { label: "Contact", href: "/contact" },
                           { label: "Pricing", href: "/pricing" },
+                          { label: "Login", href: "/login" },
                         ],
                         showNotifications: false,
                         showUserMenu: false,
@@ -96,6 +98,7 @@ const App = () => {
                   }
                 >
                   <Route index element={<Index />} />
+                  <Route path="login" element={<LoginPage />} />
                   <Route path="*" element={<NotFound />} />
                 </Route>
 
