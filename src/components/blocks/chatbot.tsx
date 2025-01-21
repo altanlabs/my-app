@@ -14,7 +14,7 @@ export function Chatbot() {
   const handleSend = () => {
     if (input.trim() === '') return;
 
-    const newMessages = [...messages, { sender: 'user', text: input }];
+    const newMessages: ChatMessage[] = [...messages, { sender: 'user', text: input }];
     setMessages(newMessages);
     setInput('');
 
