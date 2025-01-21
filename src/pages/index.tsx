@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Chatbot } from "@/components/blocks/chatbot";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -95,6 +96,17 @@ export default function IndexPage() {
             </CardContent>
           </Card>
         </motion.div>
+      </motion.section>
+
+      {/* Chatbot Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="mt-16"
+      >
+        <h2 className="text-3xl font-bold text-center mb-8">Asistente Virtual</h2>
+        <Chatbot />
       </motion.section>
     </div>
   );
